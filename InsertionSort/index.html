@@ -3,21 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CodeWithGeeks -- Insertion Sort</title>
-	
-	<style>
-		.newIntInput 
-		{
-			-webkit-transition:all linear 0.5s;
-			transition:all linear 0.5s;
-			background: transparent;
-		}
-		.newIntInput.ng-invalid 
-		{
-			color:white;
-			background: red;
-		}
-</style>
-	
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body ng-app="insertSort">
@@ -35,10 +21,10 @@
 		
 		<div class="animated-algo" ng-controller="animator">
 			Now that you know what insertion sort is, keep adding new integers to form a sorted list.
-			<input type="text" class="newIntInput" ng-pattern="/^\d+$/" ng-model="newInt">{{newInt}}
+			<input type="text" class="newIntInput" ng-pattern="/^\d+$/" ng-model="newInt">
 			<button type="button" ng-click="addNewInt(newInt)">Add</button>
-			<div id="visual-list" ng-repeat="curInt in integerList">
-				<div>{{curInt}}</div>
+			<div id="visual-list" ng-repeat="curInt in integerList track by $index">
+				<div class="list-elements">{{curInt}}</div>
 			</div>
 		</div>
 		
@@ -46,6 +32,7 @@
 			<tr>
 			</tr>
 		</table>
+		<br>
 		<a href="http://en.wikipedia.org/wiki/Insertion_sort">Refer Wikipedia</a>
 	</div>
 	<footer>

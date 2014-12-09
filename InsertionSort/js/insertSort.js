@@ -9,7 +9,7 @@ curModule.controller("animator",
 		$scope.addNewInt = 	function(newI)
 							{
 								$scope.integerList.push(newI);
-								$scope.integerList.sort(function(a, b){return a-b});
+								$scope.integerList.sort(function(a, b){return (a>b);});
 							}
 	}
 );
