@@ -1,0 +1,2 @@
+1) Display the algorithm in text format
+2) Provide an animated represtentation of the working(Using WebGL preferably)
