@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CodeWithGeeks -- Insertion Sort</title>
+	
+	<style>
+		.newIntInput 
+		{
+			-webkit-transition:all linear 0.5s;
+			transition:all linear 0.5s;
+			background: transparent;
+		}
+		.newIntInput.ng-invalid 
+		{
+			color:white;
+			background: red;
+		}
+</style>
+	
+</head>
+
+<body ng-app="insertSort">
+	<h1>Insertion Sort</h1>
+	<div class="algo-description">
+		<p>
+			Have you ever played UNO? Have you ever been bombarded by many Draw-4s? Surely then, to find the relevant card to play with a big deck in your hand would have been a hectic task. And to simplify, you would have spent some time to arrange the cards. Congratulations, you already know sorting.<br>
+			Sorting is nothing but arraging a list of objects in a particular fashion. For example - Sorting in a "non-descending order" means that any object in the list should be greater than or equal to the objects occuring before it. If it's not, better relocate it.<br> 
+			Comparing the objects can vary with the nature of object. Two strings might be compared based on their length or occurence in lexicographic order. Two integers might be compared based on their values. You can decide your own comparison function. YOU have the POWER!!
+		</p>
+		<p>
+			<!-- Put algorithm here -->
+			
+		</p>
+		
+		<div class="animated-algo" ng-controller="animator">
+			Now that you know what insertion sort is, keep adding new integers to form a sorted list.
+			<input type="text" class="newIntInput" ng-pattern="/^\d+$/" ng-model="newInt">{{newInt}}
+			<button type="button" ng-click="addNewInt(newInt)">Add</button>
+			<div id="visual-list" ng-repeat="curInt in integerList">
+				<div>{{curInt}}</div>
+			</div>
+		</div>
+		
+		<table>
+			<tr>
+			</tr>
+		</table>
+		<a href="http://en.wikipedia.org/wiki/Insertion_sort">Refer Wikipedia</a>
+	</div>
+	<footer>
+		<p>&copy; 2014 CodeWithGeeks.in. All rights reserved.</p>
+	</footer>
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<script src="js/insertSort.js"></script>
+</body>
+
+
+</html>
